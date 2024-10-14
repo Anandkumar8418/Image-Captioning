@@ -8,3 +8,6 @@ git clone https://github.com/Anandkumar8418/Image-Captioning
 ```bash
 python -c main.py
 ```
+
+For model training go to this repository
+[https://github.com/Anandkumar8418/ImageCaption-Model]
