@@ -37,7 +37,7 @@ def generate_caption(img_path, model, tokenizer):
     y_pred = predict_caption(model_caption, feature, tokenizer, 39)
     return y_pred
 
-model_caption = pickle.load(open('/Users/whitedevil4648/Desktop/Image Captioning/Deployment/best.pkl', 'rb'))
+model_caption = pickle.load(open('best.pkl', 'rb'))
 model_img = VGG16()
 model_img = Model(inputs=model_img.inputs, outputs=model_img.layers[-2].output)
 
@@ -62,7 +62,7 @@ def upload():
     img_path = os.path.join(upload_folder, file.filename)
     file.save(img_path)
 
-    with open('/Users/whitedevil4648/Desktop/Image Captioning/Deployment/tokenizer.pkl', 'rb') as handle:
+    with open('tokenizer.pkl', 'rb') as handle:
         tokenizer = pickle.load(handle)
 
     pred = generate_caption(img_path, model_img, tokenizer)
