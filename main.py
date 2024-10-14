@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request # type: ignore
 import pickle
 import numpy as np
 from tensorflow.keras.applications.vgg16 import VGG16, preprocess_input # type: ignore
